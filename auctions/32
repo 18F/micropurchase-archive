@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1cbda4d708","applicationID":"18978233","transactionName":"JVsIRkZaVFRRER0FFAVAD11aRhdLXAxF","queueTime":0,"applicationTime":52,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="robots" content="noodp" />
+    
+
+    <title>18F Micro-purchase - Create Wagtail templates for the Federal Election Commission (FEC)</title>
+    <meta property="og:title" content="18F Micro-purchase - Create Wagtail templates for the Federal Election Commission (FEC)">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="all" href="../assets/application-e5d61d9fdbed3db45d23f3a3d1305d55f510f261ecfe3a9fc260025f259f26df.css" debug="true" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+//<![CDATA[
+window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-838a8314f0932a08b822e07ddb23086e6e381a141f3d3a8263f8a42ccdadc50f.js">%3C/script>'))
+//]]>
+</script>
+    <script src="../assets/application-30e199d0f957b76cbc8263396309fcba7602b98bf636f4cc51dcd692351732b6.js" debug="true"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="GOzGjCOXkX3tqtq1aaFAQIICefsgJpKyGceQ+fPpMhVaU8sGP87GmNMd3CMVZQZFWeaC6QyUnqW5Q7eRKRk78A==" />
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-69ed8e7688dee6852c16309cb9f7c58ec43560321d03fb7605874c792b23d02f.ico" />
+
+    <!-- Meta tags -->
+    <meta name="twitter:site" content="@18F">
+    <meta name="twitter:creator" content="@18F">
+    <meta property="og:site_name" content="18F - Micro-purchase" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://micropurchase.18f.gov" />
+    <link rel="canonical" href="https://micropurchase.18f.gov" />
+
+    <meta name="description" content="This auction is for [betaFEC](https://beta.fec.gov/), which is the in-progress, complete redesign of the Federal Election Commission’s online presence. [Wagtail](https://wagtail.io/) — our content management system (CMS) for this project — needs some templates. This auction seeks the creation of three templates based on [our mockups](https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455273).">
+    <meta property="og:description" content="This auction is for [betaFEC](https://beta.fec.gov/), which is the in-progress, complete redesign of the Federal Election Commission’s online presence. [Wagtail](https://wagtail.io/) — our content management system (CMS) for this project — needs some templates. This auction seeks the creation of three templates based on [our mockups](https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455273).">
+
+    <meta name="twitter:card" content="summary">
+
+      <meta name="twitter:label1" value="Status">
+<meta name="twitter:data1" value="Closed">
+<meta name="twitter:label2" value="Winning Bid">
+<meta name="twitter:data2" value="$1,440.00">
+
+
+
+      <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48605964-40', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="site">
+    <div class="usa-disclaimer">
+  <div class="usa-grid">
+    <div class="usa-width-one-whole">
+      <span class="usa-disclaimer-official">
+        <img class="usa-flag_icon" alt="US flag signifying that this is a United States Federal Government website" src="../assets/uswds/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png" />
+        An official website of the United States Government
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<header class="header">
+<div class="usa-grid">
+  <div class="usa-grid-one-half icon">
+    <a href="../index.html">
+      <div class="title">
+        Micro-purchase <span class="usa-label label-beta">Beta</span>
+        <div class="subtitle">A marketplace for open source work</div>
+      </div>
+</a>  </div>
+
+  <div class="usa-grid-one-half" >
+    <nav class="header-side">
+      <ul class="nav">
+          <li class="nav-link sign-in">
+  Use your GitHub account to
+  <a href="../auth/github">Sign in</a>
+  or
+  <a href="../auth/github">Sign up</a>
+  </li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+</header>
+
+
+    <div class="site-content">
+      
+      
+
+
+<div class="auction-show">
+  <div class="auction-header-wrapper">
+    <div class="usa-grid">
+      <div class="auction-title">
+        <h1>Create Wagtail templates for the Federal Election Commission (FEC)</h1>
+        
+
+        <div class="auction-subtitles">
+          <div class="auction-subtitle">
+            <div class="bidding-status">
+              <span class="status-label over">Closed</span>
+
+            </div>
+          </div>
+          <div class="auction-subtitle">
+            Ended on 08/25/2016
+          </div>
+          <div class="auction-subtitle">
+            Winning bid (Scampersand): $1,440.00
+          </div>
+        </div>
+      </div>
+
+      <div class="auction-subnav">
+  <a class="nav-auction active" href="32#">Auction</a>
+  <a class="nav-auction" href="32#">Bids</a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="usa-grid">
+    <div class="usa-width-two-thirds">
+      <div class="js-auction-view">
+  <div class="auction-body">
+    <div class="auction-description">
+      <h2>Skills</h2>
+      Django, HTML, Python, and Wagtail
+      <p><a href="https://wagtail.io/">Wagtail</a> is a library that adds CMS functionality to a Django application. The <a href="https://beta.fec.gov/">betaFEC</a> team needs three new templates built for Wagtail based on these mockups:</p>
+
+<ul>
+<li>Screen 1: Record (<a href="https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455271">https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455271</a>)</li>
+<li>Screen 2: Digest (<a href="https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455273">https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455273</a>)</li>
+<li>Screen 3: News Release (<a href="https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455270">https://gsa.invisionapp.com/share/MY89RFSRZ#/screens/180455270</a>)</li>
+</ul>
+
+<h3>Specific Acceptance Criteria</h3>
+
+<p>For each of these mockups, a betaFEC admin should be able to:</p>
+
+<ul>
+<li>See that the template is registered within Wagtail</li>
+<li>Manually select a related article (if no related article is selected, the system will select by default the next article for that page type)</li>
+<li>Select a tag</li>
+<li>Create a working page that substantially resembles the page in the mockup</li>
+</ul>
+
+<p>In order to create templates from the mockups, you&#39;ll likely need to create new Page Models for Wagtail. The following are the models and fields for each template:</p>
+
+<h4>Author</h4>
+
+<p>This model will not have its own template, but its data will be needed for other templates/Page models.</p>
+
+<ul>
+<li>Name</li>
+<li>Bio</li>
+<li>Photo (the admin should be able to upload a file)</li>
+</ul>
+
+<h4>Record</h4>
+
+<p>Create this model and a corresponding template.</p>
+
+<ul>
+<li>Title</li>
+<li>Author (select field, one or many)</li>
+<li>Body (styled text)</li>
+<li>Date (date field, default to current date)</li>
+<li>Category (either create a separate table and associate here, or make an enum. Regardless, the admin should be able to select from the following fields: <code>Advisory Opinions</code>, <code>Commission</code>, <code>Compliance</code>, <code>Litigation</code>, <code>Outreach</code>, <code>Public Funding</code>, <code>Regulations</code>, <code>Reporting</code>, <code>Statistics</code>. The field should be a select field.)</li>
+<li>Read Next Article Title (text field. If null, field does not display in the template)</li>
+<li>Read Next Article URL (text field. If null, field does not display in the template)</li>
+<li>Related Section Title (text field. If null, field does not display in the template)</li>
+<li>Related Section URL (text field. If null, field does not display in the template)</li>
+</ul>
+
+<h4>Digest</h4>
+
+<p>Create this model and a corresponding template.</p>
+
+<ul>
+<li>Title</li>
+<li>Author (select field, one or many)</li>
+<li>Body (styled text)</li>
+<li>Date (date field, default to current date)</li>
+<li>Read Next Article Title (text field. If null, field does not display in the template)</li>
+<li>Read Next Article URL (text field. If null, field does not display in the template)</li>
+</ul>
+
+<h4>News Release</h4>
+
+<p>Create this model and a corresponding template.</p>
+
+<ul>
+<li>Title</li>
+<li>Author (select field, one or many)</li>
+<li>Date (date field, default to current date)</li>
+<li>Category (either create a separate table and associate here, or make an enum. Regardless, the admin should be able to select from the following fields: (<code>Audit reports</code>, <code>Campaign finance data summaries</code>, <code>Commission appointments</code>, <code>Disclosure initiatives</code>, <code>Enforcement matters</code>, <code>Hearings</code>, <code>Litigation</code>, <code>Non-filer publications</code>, <code>Open meetings and related matters</code>, <code>Presidential public funds</code>, <code>Rulemakings</code>, <code>Other agency actions</code>). This should be a select field)</li>
+<li>Read Next Article Title (text field. If null, field does not display in the template)</li>
+<li>Read Next Article URL (text field. If null, field does not display in the template)</li>
+</ul>
+
+<h3>General Acceptance Criteria</h3>
+
+<ul>
+<li>The delivered pull request will not break the Travis CI build (see the <a href="https://github.com/18F/fec-cms/blob/develop/.travis.yml">.travis.yml</a> file to see which tests will run.</li>
+<li>Any new functionality is adequately tested (see &quot;<a href="http://devxdocs.com/blog/2016/4/8/writing-unit-tests-for-wagtail">Writing Unit Tests For Wagtail</a>&quot;). </li>
+<li>The delivered code does not degrade accessibility (we recommend using <a href="http://pa11y.org/">pa11y</a> and/or the <a href="https://squizlabs.github.io/HTML_CodeSniffer/">HTML Code Sniffer</a> to continuously evaluate accessibility).</li>
+</ul>
+
+<h3>Deliverables</h3>
+
+<p>A pull request submitted to <a href="https://github.com/18F/fec-cms">https://github.com/18F/fec-cms</a> which satisfies the acceptance criteria described above.</p>
+
+<h3>Resources</h3>
+
+<ul>
+<li><p>Wagtail template documentation: <a href="http://docs.wagtail.io/en/v1.6/topics/writing_templates.html#writing-templates">http://docs.wagtail.io/en/v1.6/topics/writing_templates.html#writing-templates</a></p></li>
+<li><p>fec-cms repo set-up instructions: <a href="https://github.com/18f/fec-cms#set-up">https://github.com/18f/fec-cms#set-up</a></p></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+      <div class="js-auction-view hide">
+  <div class="auction-body">
+    
+
+
+    <table class="usa-table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Bidder</th>
+          <th scope="col">DUNS</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Date (EST)</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>Scampersand</td>
+            <td>080287835</td>
+            <td>$1,440.00 *</td>
+            <td>August 25, 2016 08:23:57 AM EDT</td>
+          </tr>
+          <tr>
+            <td>Julio Carlos Menendez</td>
+            <td>028629360</td>
+            <td>$2,400.00</td>
+            <td>August 23, 2016 11:01:44 PM EDT</td>
+          </tr>
+          <tr>
+            <td>Evan Rose</td>
+            <td>07-944-1444</td>
+            <td>$2,000.00</td>
+            <td>August 23, 2016 01:49:41 PM EDT</td>
+          </tr>
+      </tbody>
+    </table>
+    <p>
+      &#42; - winning bid
+    </p>
+  </div>
+</div>
+
+    </div>
+
+    <div class="usa-width-one-third">
+      <div class="auction-detail-panel">
+  <div class="usa-alert usa-alert-info">
+    <div class="usa-alert-body">
+      <h3 class="usa-alert-heading">Bidding closed</h3>
+      <p class="usa-alert-text">Bidding for this auction closed on August 25, 2016 01:00:00 PM EDT.</p>
+      
+
+    </div>
+  </div>
+</div>
+
+
+      <div class="auction-detail-panel">
+        <div class="auction-info">
+            <div>
+  <h6>Auction started at</h6>
+  <p class="auction-label-info">August 23, 2016 01:00:00 PM EDT</p>
+</div>
+
+            <div>
+  <h6>Auction ended at</h6>
+  <p class="auction-label-info">August 25, 2016 01:00:00 PM EDT</p>
+</div>
+
+            <div>
+  <h6>Delivery deadline</h6>
+  <p class="auction-label-info">August 31, 2016 01:00:00 PM EDT</p>
+</div>
+
+            <div>
+  <h6>Eligible vendors</h6>
+  <p class="auction-label-info">SAM.gov only</p>
+</div>
+
+            <div>
+  <h6>Customer</h6>
+  <p class="auction-label-info">BetaFEC</p>
+</div>
+
+
+          <h6>Auction type:</h6>
+          <p class="auction-label-info">
+          Sealed bid
+          (<a href="rules/sealed-bid">rules</a>)
+          </p>
+          <div>
+  <h6>Paid at:</h6>
+  <p class="auction-label-info">September 06, 2016 02:20:02 PM EDT</p>
+</div>
+
+          <div>
+  <h6>Accepted at:</h6>
+  <p class="auction-label-info">September 02, 2016 06:38:17 PM EDT</p>
+</div>
+
+          <p>
+          <i class="fa fa-github"></i>
+          <a target="_blank" href="https://github.com/18F/fec-cms/issues/440">View on GitHub <icon class="fa fa-angle-double-right"></icon></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    <footer class="usa-footer usa-footer-slim" role="contentinfo">
+
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav usa-width-two-thirds">
+      <ul class="usa-unstyled-list">
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="../about">About</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="../policies">Policies</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="../docs.1">Docs</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="../insights">Insights</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="../api">API</a>
+        </li>
+      </ul>
+      </nav>
+      <div class="usa-width-one-third">
+        <div class="usa-footer-primary-content usa-footer-contact_info">
+          <a href="https://github.com/18F/micropurchase/">
+            <i class="fa fa-github"></i> View on GitHub
+          </a>
+        </div>
+        <div class="usa-footer-primary-content usa-footer-contact_info">
+          <a href="mailto:micropurchase@gsa.gov">micropurchase@gsa.gov</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid">
+      <div class="usa-footer-logo">
+        <img class="usa-footer-slim-logo-img logo-img" alt="Logo image" src="../assets/18F-Logo-2016-Blue-6710315924c9b82b3a0bbf41a40b953176c442dd7e0e5b63e69ce89c0ce8ad87.svg" />
+        <div class="usa-footer-slim-logo-heading">Micro-purchase</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      <script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js" id="_fed_an_ua_tag"></script>
+
+  </body>
+</html>

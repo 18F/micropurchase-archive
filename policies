@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1cbda4d708","applicationID":"18978233","transactionName":"JVsIRkZaVFRRER0MCAFcOURbWUxZUwYdFAABURUdR11XTw==","queueTime":1,"applicationTime":13,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="robots" content="noodp" />
+    
+    <title>18F - Micro-purchase</title>
+    <meta property="og:title" content="18F - Micro-purchase">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="all" href="assets/application-e5d61d9fdbed3db45d23f3a3d1305d55f510f261ecfe3a9fc260025f259f26df.css" debug="true" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+//<![CDATA[
+window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-838a8314f0932a08b822e07ddb23086e6e381a141f3d3a8263f8a42ccdadc50f.js">%3C/script>'))
+//]]>
+</script>
+    <script src="assets/application-30e199d0f957b76cbc8263396309fcba7602b98bf636f4cc51dcd692351732b6.js" debug="true"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="vlSWH6Tj3fuTnDI+TAurxlkF29kldxB1PrKG5mAkKyr865uVuLqKHq0rNKgwz+3DguEgywnFHGKeNqGOutQizw==" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon-69ed8e7688dee6852c16309cb9f7c58ec43560321d03fb7605874c792b23d02f.ico" />
+
+    <!-- Meta tags -->
+    <meta name="twitter:site" content="@18F">
+    <meta name="twitter:creator" content="@18F">
+    <meta property="og:site_name" content="18F - Micro-purchase" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://micropurchase.18f.gov" />
+    <link rel="canonical" href="https://micropurchase.18f.gov" />
+
+    <meta name="description" content="The Micro-purchase Marketplace is the place to bid on open-source issues from the 18F team.">
+    <meta property="og:description" content="The Micro-purchase Marketplace is the place to bid on open-source issues from the 18F team.">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+      <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48605964-40', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="site">
+    <div class="usa-disclaimer">
+  <div class="usa-grid">
+    <div class="usa-width-one-whole">
+      <span class="usa-disclaimer-official">
+        <img class="usa-flag_icon" alt="US flag signifying that this is a United States Federal Government website" src="assets/uswds/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png" />
+        An official website of the United States Government
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<header class="header">
+<div class="usa-grid">
+  <div class="usa-grid-one-half icon">
+    <a href="index.html">
+      <div class="title">
+        Micro-purchase <span class="usa-label label-beta">Beta</span>
+        <div class="subtitle">A marketplace for open source work</div>
+      </div>
+</a>  </div>
+
+  <div class="usa-grid-one-half" >
+    <nav class="header-side">
+      <ul class="nav">
+          <li class="nav-link sign-in">
+  Use your GitHub account to
+  <a href="auth/github">Sign in</a>
+  or
+  <a href="auth/github">Sign up</a>
+  </li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+</header>
+
+
+    <div class="site-content">
+      
+      <div class="usa-grid">
+  <h1>Policies</h1>
+
+  <p class="usa-font-lead">This document provides an overview of how 18F
+  Micro-purchase works and a set of rules to which our administrators will refer
+  while running auctions.</p>
+
+  <h2 id="how-auctions-work">How auctions work</h2>
+  <p>Most auctions follow a pretty standard process:</p>
+
+  <ol>
+    <li><strong>Pre-bidding period ("coming soon"):</strong> Auctions are posted
+    to the Micro-purchase Platform (and announced via our newsletter and Twitter
+    accounts) before bidding begins. This gives prospective vendors time to
+    estimate the effort that it might take to meet their acceptance criteria.
+    </li>
+    <li><strong>Bidding period ("open"):</strong> <a
+      href="policies#eligibility-to-bid">Eligible</a> vendors can place bids on the
+    auction from the time it "opens" (its "opening date") until the time it
+    "closes" (its "closing date"). At that time, the lowest bidder wins and must
+    deliver the code by the auction's delivery deadline.</li>
+    <li><strong>Delivery period:</strong> The winning vendor indicates that
+    they've begun work by <a
+      href="https://help.github.com/articles/using-pull-requests/">issuing a
+      pull request</a>, <a
+      href="https://guides.github.com/features/issues/#notifications">referencing</a>
+    the issue associated with the auction, and clicking the "Start work" button
+    on the auction's page. At that point the conversation moves to the pull
+    request itself, wherein the winning vendor can update 18F and our customer
+    on their work in progress, ask questions, etc. Once the vendor believes
+    their pull request meets the auction's acceptance criteria, they'll return
+    to the auction page and indicate that they've finished their work by
+    clicking the "I'm done" button.</li>
+    <li><strong>Acceptance period:</strong> 18F works with our customer to
+    evaluate the winning vendor's code against the auction's acceptance
+    criteria. If the code meets the criteria, it's accepted. Otherwise, it's
+    rejected.</li>
+    <li><strong>Payment period:</strong> If their solution is accepted, the
+    winning vendor will receive payment at the payment URL specified in their
+    profile.</li>
+  </ol>
+
+  <p>That's the process in a nutshell. Additional details, including deviations
+  from this process, are covered below, under "source-selection method" and
+  "delivery and acceptance policy."</p>
+
+  <h2 id="code-of-conduct">Code of conduct</h2>
+
+  <p>Users of 18F's Micro-purchase Platform agree to abide by the <a
+    href="https://github.com/18F/code-of-conduct/blob/master/code-of-conduct.md">18F
+    Code of Conduct</a>.</p>
+
+  <h2 id="transparency-policy">Transparency policy</h2>
+
+  <p>18F will publish, on a publicly available website
+  (https://micropurchase.18f.gov), data associated with each auction (including
+  the auction description, acceptance criteria, amendments, etc.) and other
+  relevant information that is neither confidential or proprietary in nature nor
+  source-selection sensitive information that would otherwise implicate
+  procurement integrity concerns. </p>
+
+  <p>Auctions on 18F Micro-purchase are run according to a set of rules, either
+  as a sealed-bid auction or a (standard) reverse-auction. If an auction is run
+  as a <strong>sealed-bid auction,</strong> the total number of bids, the
+  identity of any vendor who places a bid, and the dollar amount of each bid
+  placed will be recorded but will be hidden from public view until the auction
+  closes and a winner is chosen.</p>
+
+  <p>If an auction is run as a <strong>reverse auction,</strong> any bids placed
+  on that auction are immediately made public, including the identity of the
+  vendor who placed it and the dollar amount of their bid. Making this
+  information public enables vendors to know if they are the low bidder and if
+  they've been outbid.</p>
+
+  <p>Once a winner is chosen, 18F will publish the final bid of each auction and
+  specific source-identifying data; for example, the quantity and amount of any
+  bids placed, the names of vendors who've placed bids, etc. During the delivery
+  period of each auction, 18F will collaborate with vendors in a publicly
+  visible GitHub issue and/or pull request, sharing any data related to project
+  management (for example, user stories, milestones, test scores, and
+  performance metrics).</p>
+
+  <h2 id="premature-closing">Premature closing</h2>
+
+  <p>18F reserves the right to delete an auction, prohibit bidding, and forego
+  delivery at any point in the pre-bidding, bidding, delivery, and acceptance
+  processes outlined above. 18F will not issue payment to a vendor until that
+  vendor's code has been deemed acceptable (see "Delivery and acceptance
+  policy," below) and their pull request has been merged.</p>
+
+  <h2 id="eligibility-to-bid">Eligibility to bid</h2>
+
+  <p>Vendors must have a GitHub account to register and sign into the
+  Micro-purchase Platform. In order to <a href="docs/placing_a_bid">place a bid</a>, vendors must obtain a DUNS number and
+    register in SAM.gov. Finally, auctions with a starting bid greater than
+    $3,500 are limited to those vendors whose SAM.gov profile indicates that
+    they are registered as a small business.</p>
+
+  <h2 id="source-selection-method">Source-selection method</h2>
+
+  <p>18F Micro-purchase uses reverse-auctions to determine the source for any
+  given procurement. Eligible vendors can place bids on an auction during its
+  bidding period. Once that period ends, the vendor with the lowest bid is
+  deemed the winner. In the event of a tie, the <em>first</em> vendor to place
+  the bid is deemed the winner. </p>
+
+  <p>In the event that a winner is either (a) unable to deliver on an auction by
+  the delivery deadline assigned to them or (b) delivers code that is deemed
+  unacceptable, 18F reserves the right to reject the auction, choose a new
+  winner, or re-run the auction. If 18F chooses a new winner for an auction,
+  that winner will be either a vendor that tied with the original winner (but
+  who placed their bid just after the original winner) or the next-highest
+  bidder — with preference given to the former.</p>
+
+  <h2 id="bid-acknowledgement-and-communication">Bid acknowledgement and communication</h2>
+
+  <p>18F will contact the winning bidder within 24 hours of the end of the
+  auction. We require a timely response to acknowledge and confirm the bid
+  amount. The code requested in the auction will be due as explained in the
+  acceptance criteria of each specific auction.</p>
+
+  <h2 id="delivery-and-acceptance-policy">Delivery and acceptance policy</h2>
+
+  <p>18F gives every auction a <strong>delivery period;</strong> that is, a
+  rough estimate of how long we think it'll take vendors to complete the work.
+  The default delivery period is five business days.</p>
+
+  <p>An auction's <strong>delivery deadline</strong> is set whenever a winner is
+  chosen. Delivery deadlines are based on an auction's delivery period, but
+  exclude holidays and weekends. For example, if an auction's delivery period is
+  three business days, and that auction ends the Friday before Labor Day, then
+  the delivery deadline will fall on the following Thursday.</p>
+
+  <p>We realize that unanticipated issues may arise during the delivery period
+  that need to be resolved in order for winning vendors to successfully deliver.
+  We encourage winning vendors to submit their work, even if it's incomplete,
+  and ask questions early and often.</p>
+
+  <p>In some cases, 18F may, at its discretion, agree to an extension of the
+  delivery period, known as a "cure period." During the cure period, vendors are
+  required to fix any bugs or otherwise refine their pull request so that it can
+  be accepted and merged. The length of the cure period will vary depending on
+  what is needed, but will not exceed five (5) business days.</p>
+  <h2 id="payment">Payment</h2>
+
+  <p>Payments are usually made promptly after winning vendor's pull request has
+  been merged. Unless otherwise indicated in writing, payments will be made to
+  the payment URL specified in the winning vendor's account. To ensure timely
+  payment, vendors should <a href="policies"></a>specify their payment URL
+  <em>before</em> placing a bid. Any and all fees associated with the credit
+  card payment are the responsibility of the winning vendor (that is, they will
+  come out of the award).</p>
+
+  <h2 id="micro-purchase-platform-fee">Micro-purchase (platform) fee</h2>
+
+  <p>18F charges its customers a platform fee of $1,000 per auction to help
+  cover our operational expenses. This fee is assessed whenever an auction is
+  successfully completed; that is, whenever a vendor's work is accepted.</p>
+
+  <p>A platform fee is not assessed whenever an auction ends without a winner or
+  whenever an auction ends because its winning vendor's work was rejected. In
+  these instances, our team will likely work to collaboratively revise our
+  customer's acceptance criteria and relist their auction.</p>
+
+  <p>At this time, 18F waives the platform fee for any office within GSA's
+  Technology Transformation Service (TTS).</p>
+</div>
+
+    </div>
+
+    <footer class="usa-footer usa-footer-slim" role="contentinfo">
+
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav usa-width-two-thirds">
+      <ul class="usa-unstyled-list">
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="about">About</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="policies">Policies</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="docs.1">Docs</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="insights">Insights</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="api">API</a>
+        </li>
+      </ul>
+      </nav>
+      <div class="usa-width-one-third">
+        <div class="usa-footer-primary-content usa-footer-contact_info">
+          <a href="https://github.com/18F/micropurchase/">
+            <i class="fa fa-github"></i> View on GitHub
+          </a>
+        </div>
+        <div class="usa-footer-primary-content usa-footer-contact_info">
+          <a href="mailto:micropurchase@gsa.gov">micropurchase@gsa.gov</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid">
+      <div class="usa-footer-logo">
+        <img class="usa-footer-slim-logo-img logo-img" alt="Logo image" src="assets/18F-Logo-2016-Blue-6710315924c9b82b3a0bbf41a40b953176c442dd7e0e5b63e69ce89c0ce8ad87.svg" />
+        <div class="usa-footer-slim-logo-heading">Micro-purchase</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      <script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js" id="_fed_an_ua_tag"></script>
+
+  </body>
+</html>

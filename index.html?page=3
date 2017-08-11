@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1cbda4d708","applicationID":"18978233","transactionName":"JVsIRkZaVFRRER0FFAVAD11aRhdRWgdXHA==","queueTime":12,"applicationTime":165,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="robots" content="noodp" />
+    
+    <title>18F - Micro-purchase</title>
+    <meta property="og:title" content="18F - Micro-purchase">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="all" href="assets/application-e5d61d9fdbed3db45d23f3a3d1305d55f510f261ecfe3a9fc260025f259f26df.css" debug="true" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+//<![CDATA[
+window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-838a8314f0932a08b822e07ddb23086e6e381a141f3d3a8263f8a42ccdadc50f.js">%3C/script>'))
+//]]>
+</script>
+    <script src="assets/application-30e199d0f957b76cbc8263396309fcba7602b98bf636f4cc51dcd692351732b6.js" debug="true"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="SNipxzIg6nXfKWFgLqcOSLNZbm5YgAktbWsXQs2KZEYKZ6RNLnm9kOGeZ/ZSY0hNaL2VfHQyBTrN7zAqF3ptow==" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon-69ed8e7688dee6852c16309cb9f7c58ec43560321d03fb7605874c792b23d02f.ico" />
+
+    <!-- Meta tags -->
+    <meta name="twitter:site" content="@18F">
+    <meta name="twitter:creator" content="@18F">
+    <meta property="og:site_name" content="18F - Micro-purchase" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://micropurchase.18f.gov" />
+    <link rel="canonical" href="https://micropurchase.18f.gov" />
+
+    <meta name="description" content="The Micro-purchase Marketplace is the place to bid on open-source issues from the 18F team.">
+    <meta property="og:description" content="The Micro-purchase Marketplace is the place to bid on open-source issues from the 18F team.">
+
+    <meta name="twitter:card" content="summary">
+
+      <meta name="twitter:label1" value="Active Auctions">
+  <meta name="twitter:data1" value="0">
+  <meta name="twitter:label2" value="Coming Auctions">
+  <meta name="twitter:data2" value="0">
+
+
+      <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48605964-40', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="site">
+    <div class="usa-disclaimer">
+  <div class="usa-grid">
+    <div class="usa-width-one-whole">
+      <span class="usa-disclaimer-official">
+        <img class="usa-flag_icon" alt="US flag signifying that this is a United States Federal Government website" src="assets/uswds/us_flag_small-8a6f68dd8703ce4cb475c92fc1eefa84c41f4741ec4c6ca8403ef99b74b94d20.png" />
+        An official website of the United States Government
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<header class="header">
+<div class="usa-grid">
+  <div class="usa-grid-one-half icon">
+    <a href="index.html">
+      <div class="title">
+        Micro-purchase <span class="usa-label label-beta">Beta</span>
+        <div class="subtitle">A marketplace for open source work</div>
+      </div>
+</a>  </div>
+
+  <div class="usa-grid-one-half" >
+    <nav class="header-side">
+      <ul class="nav">
+          <li class="nav-link sign-in">
+  Use your GitHub account to
+  <a href="auth/github">Sign in</a>
+  or
+  <a href="auth/github">Sign up</a>
+  </li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+</header>
+
+
+    <div class="site-content">
+      
+      
+<section class="slab-intro usa-grid">
+  <h1 class="intro-text">Welcome!</h1>
+  <p>
+  The Micro-purchase Marketplace is the place to bid on open-source issues from
+  the 18F team. <a href="insights">Learn more about this experiment <icon class="fa
+  fa-angle-double-right"></a>
+  </p>
+
+  <p>
+  Be sure to <a href="auth/github">register your company</a> before
+  placing a bid. If you have any questions, please email us at <a href="mailto:micropurchase@gsa.gov">micropurchase@gsa.gov</a>.
+  </p>
+</section>
+
+
+<div class="usa-grid">
+  <h2>Auctions</h2>
+
+  <div class="auction-wrapper">
+      <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/18">Open Opportunities: Create Failing Test for Missing Notification</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 03/14/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $3,198.00
+
+        </div>
+      </div>
+      <p>
+        <p>Open Opportunities uses the open source <a href="http://sailsjs.org/">sails.js</a> MVC framework (Node.js / Express) and the <a href="https://mochajs.org/">Mocha</a> and <a href="http://chaijs.com/">Chai</a> test frameworks.  Currently, a task creator should receive the following notification if a task they created receives a comment. This issue sees the creation of a failing test that will only pass when the notification functionality is restored.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/openopps-platform">https://github.com/18F/openopps-platform</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/reverse">Reverse</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              Chai, Express, Mocha, Node.js, Sails.js
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/23">Set up docker-compose for Tock Django app</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 03/14/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $400.00
+
+        </div>
+      </div>
+      <p>
+        <p>We want setting up a development environment for the Tock Django app to be as easy as possible. To accomplish this, we want to use <a href="https://docs.docker.com/compose/"><code>docker-compose</code></a>. This issue seeks to make it easy for anyone to get up running with a local instance of the Tock Django app.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/tock">https://github.com/18F/tock</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/sealed-bid">Sealed bid</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              Django, Python
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/19">Open Opportunities: Task Creation Helper-Text</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 03/14/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $1,875.00
+
+        </div>
+      </div>
+      <p>
+        <p>Open Opportunities uses the open source <a href="http://sailsjs.org/">sails.js</a> MVC framework (Node.js / Express). The platform helps government workers foster collaboration on their projects. This issue seeks to add sample description text to the Task Creation Form, when the &quot;Full Time Detail&quot; Option is selected.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/openopps-platform">https://github.com/18F/openopps-platform</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/reverse">Reverse</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              Chai, Express, Mocha, Node.js, Sails.js
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/21">Create a Google Script to convert Google Sheet data into JSON</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 03/14/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $249.00
+
+        </div>
+      </div>
+      <p>
+        <p>The Federal Risk and Authorization Management Program, or <a href="https://www.fedramp.gov/">FedRAMP</a>, is a government-wide program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services. This issue seeks a <a href="https://developers.google.com/apps-script/">Google Apps Script</a> that will convert a Google Sheet into JSON which adheres to a given schema file.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/fedramp-micropurchase">https://github.com/18F/fedramp-micropurchase</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/sealed-bid">Sealed bid</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              Google Apps Script, JSON
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/17">Open Opportunities: Add Sails-DB-Migrations</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 03/14/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $2,198.00
+
+        </div>
+      </div>
+      <p>
+        <p>Open Opportunities uses the open source <a href="http://sailsjs.org/">sails.js</a> MVC framework (Node.js / Express). We want to use the <a href="https://github.com/building5/sails-db-migrate">sails-db-migrate</a> package so deployments can be executed in Javascript, and developers can easily manage migrations.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/openopps-platform">https://github.com/18F/openopps-platform</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/reverse">Reverse</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              Chai, Express, Mocha, Node.js, Sails.js
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/16">Specify micro-purchase delivery deadline as a number of business days</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 02/26/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $1.00
+
+        </div>
+      </div>
+      <p>
+        <p>Currently when creating auctions in the micro-purchase admin panel, the admin must enter a delivery deadline. This is the deadline that the winning bidder has to deliver the requirements. This issue seeks to make it easier for site admins to enter this time.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/micropurchase">https://github.com/18F/micropurchase</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/sealed-bid">Sealed bid</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              CSS, HTML, Rails, Ruby
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/11">De-duplicate data from Tock and Float</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 02/26/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $1,649.00
+
+        </div>
+      </div>
+      <p>
+        <p>This issue seeks to provide a command-line script that pulls data from Tock and Float and returns a list of possibly-duplicate project names.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/deduplicate-tock-float">https://github.com/18F/deduplicate-tock-float</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/reverse">Reverse</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              Ruby
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/12">Tock superusers should be able to enter 0-60 hour week</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 02/26/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $299.00
+
+        </div>
+      </div>
+      <p>
+        <p>Tock is a simple time tracking app that 18F employees use to report their time on a weekly basis. Currently, no user may enter more than 40 hours per week. This issue seeks to allow certain specified users of Tock to enter anywhere between 0 and 60 hours.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/tock">https://github.com/18F/tock</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/sealed-bid">Sealed bid</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              CSS, Django, HTML, Python
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/13">Playbook in Action - UI Fixes to Implement US Web Design Standards</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 02/26/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $400.00
+
+        </div>
+      </div>
+      <p>
+        <p>The Playbook in Action is a python Flask application that simplifies the process of creating agile RFQs and RFPs for digital services for government Contracting Officers and Program Managers. This issue seeks to migrate the front-end design and user-interface from Bootstrap to the US Web Design Standards.</p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/playbook-in-action">https://github.com/18F/playbook-in-action</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/sealed-bid">Sealed bid</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              CSS, HTML, JavaScript
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="usa-width-one-half auction-list-item">
+  <div class="auction-content-wrapper">
+    <div class="auction-stats">
+      <div class="usa-width-one-whole">
+  <h3 class="auction-title">
+    <a href="auctions/14">Travel Form and Email Request Automation</a>
+  </h3>
+</div>
+
+
+      <div class="bidding-status">
+        <span class="status-label over">Closed</span>
+
+
+        <div class="bidding-deadline">
+          Ended on 02/26/2016
+        </div>
+
+        <div class="winning-bid-detail">
+          Winning bid: $400.00
+
+        </div>
+      </div>
+      <p>
+        <p>Travel requests must be authorized by supervisors, which is currently done via email. Certain information is required for the supervisor in order to approve or deny the request and the email is currently templated, but entered manually by the requester. This issue seeks a web form to collect the information required in the web form and generates an email to send to the supervisor.   An email must be generated in order to confirm travel dates. </p>
+
+      </p>
+    </div>
+  </div>
+  <div class="bidding-details">
+    <div class="usa-width-one-whole">
+        <ul class="details-list">
+          <li class="details-list-item">
+  <div class="details-label">Project</div>
+  <div class="details-title">
+    <a target="_blank" class="details-title" href="https://github.com/18F/travel-form">https://github.com/18F/travel-form</a>
+  </div>
+</li>
+
+          <li class="details-list-item">
+            <div class="details-label">Type</div>
+            <div class="details-title">
+              <a href="auctions/rules/reverse">Reverse</a>
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Eligibility</div>
+            <div class="details-title">
+              SAM.gov only
+            </div>
+          </li>
+
+          <li class="details-list-item">
+            <div class="details-label">Skills required</div>
+            <div class="details-title">
+              Google Apps Script
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+    <nav class="pagination">
+    <span class="first">
+  <a href="index.html">&laquo; First</a>
+</span>
+
+    <span class="prev">
+  <a rel="prev" href="index.html?page=2">&lsaquo; Prev</a>
+</span>
+
+        <span class="page">
+  <a href="index.html">1</a>
+</span>
+
+        <span class="page">
+  <a rel="prev" href="index.html?page=2">2</a>
+</span>
+
+        <span class="page current">
+  3
+</span>
+
+        <span class="page">
+  <a rel="next" href="index.html?page=4">4</a>
+</span>
+
+      <span class="next">
+  <a rel="next" href="index.html?page=4">Next &rsaquo;</a>
+</span>
+
+      <span class="last">
+  <a href="index.html?page=4">Last &raquo;</a>
+</span>
+
+  </nav>
+
+  <div class="pagination-details">
+    Displaying auctions <b>21&nbsp;-&nbsp;30</b> of <b>39</b> in total
+  </div>
+</div>
+
+    </div>
+
+    <footer class="usa-footer usa-footer-slim" role="contentinfo">
+
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav usa-width-two-thirds">
+      <ul class="usa-unstyled-list">
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="about">About</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="policies">Policies</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="docs.1">Docs</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="insights">Insights</a>
+        </li>
+        <li class="usa-width-one-sixth usa-footer-primary-content">
+        <a class="usa-footer-primary-link" href="api">API</a>
+        </li>
+      </ul>
+      </nav>
+      <div class="usa-width-one-third">
+        <div class="usa-footer-primary-content usa-footer-contact_info">
+          <a href="https://github.com/18F/micropurchase/">
+            <i class="fa fa-github"></i> View on GitHub
+          </a>
+        </div>
+        <div class="usa-footer-primary-content usa-footer-contact_info">
+          <a href="mailto:micropurchase@gsa.gov">micropurchase@gsa.gov</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid">
+      <div class="usa-footer-logo">
+        <img class="usa-footer-slim-logo-img logo-img" alt="Logo image" src="assets/18F-Logo-2016-Blue-6710315924c9b82b3a0bbf41a40b953176c442dd7e0e5b63e69ce89c0ce8ad87.svg" />
+        <div class="usa-footer-slim-logo-heading">Micro-purchase</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      <script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js" id="_fed_an_ua_tag"></script>
+
+  </body>
+</html>
