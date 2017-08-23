@@ -84,6 +84,12 @@ window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-838a8314
 
 <section class="slab-intro usa-grid">
   <h1 class="intro-text">Welcome!</h1>
+  <div class="usa-alert usa-alert-info">
+    <div class="usa-alert-body">
+      <h3 class="usa-alert-heading">Archival status</h3>
+      <p class="usa-alert-text">This site has been archived until further notice. It is a static copy of the site available on August 22, 2017, with slight changes to remove elements that would not function properly on a static site. We intend to revert to the previously-running application in the future. In the meantime, we may run auctions via the <a href="http://gsa.us9.list-manage2.com/subscribe?u=6f1977de9eff4c384dc8d6527&id=e7f757afe3">listserv</a> with email responses, and intend to resume posting opportunities to the site after reverting. Email us at <a href="mailto:micropurchase@gsa.gov">micropurchase@gsa.gov</a> with any questions.</p>
+    </div>
+  </div>
   <p>
   The Micro-purchase Marketplace is the place to bid on open-source issues from
   the 18F team. <a href="insights">Learn more about this experiment <icon class="fa
