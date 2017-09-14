@@ -78,8 +78,23 @@ window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-838a8314
     <div class="site-content">
 
       <div class="usa-grid">
+        <div class="usa-alert usa-alert-info">
+          <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Archival status</h3>
+            <p class="usa-alert-text">This site has been archived until further notice. As part of this status, the REST API has been replaced with bulk data. The bulk data contains all data that was available on the API.</p>
+          </div>
+        </div>
+
   <h1>API Documentation</h1>
 
+  <h2>Bulk Data</h2>
+  <div class="usa-width-one-whole">
+    <p><a href="./data.json">Download the bulk data</a></p>
+  </div>
+
+  <hr>
+
+  <h2>Previous API - <em>not currently operational</em></h2>
   <aside class="usa-width-one-fourth">
   <ul class="usa-sidenav-list">
     <li>
