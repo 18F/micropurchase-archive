@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="all" href="../assets/application-e5d61d9fdbed3db45d23f3a3d1305d55f510f261ecfe3a9fc260025f259f26df.css" debug="true" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 //<![CDATA[
 window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-838a8314f0932a08b822e07ddb23086e6e381a141f3d3a8263f8a42ccdadc50f.js">%3C/script>'))
