@@ -182,7 +182,7 @@ window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-838a8314
 <li>B or better Code Climate grade and 90% or higher test coverage for all modifications.</li>
 <li>Tests adequately cover any new functionality.</li>
 <li>Tests run on Travis-CI and do not break the build.</li>
-<li>A payment URL is <a href="https://micropurchase.18f.gov/docs/getting_paid">specified in your micro-purchase profile</a> so we can pay the award</li>
+<li>A payment URL is <a href="https://micropurchase.18f.gov/docs/getting_paid.html">specified in your micro-purchase profile</a> so we can pay the award</li>
 </ul>
 
     </div>
